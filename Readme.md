@@ -1,10 +1,11 @@
+
 # Java Application CI/CD Pipeline with Jenkins, SonarQube, Helm, Kubernetes, and Argo CD
 
 ## Project Overview
 
 Implemented an end-to-end CI/CD pipeline for Java-based applications using Jenkins declarative pipelines. As part of the pipeline, I have implemented various stages such as build, unit testing, static code analysis, SAST, DAST, creation of Docker images, and deployment on the Kubernetes platform using Argo CD.
 
-![Screenshot 2023-03-28 at 9 38 09 PM](https://user-images.githubusercontent.com/43399466/228301952-abc02ca2-9942-4a67-8293-f76647b6f9d8.png)
+!![CICD.png](https://github.com/asimar007/Cross-Region-Migration-of-AWS-EBS-Volumes/blob/main/Screenshot/CICD.png?raw=true)
 Here are the step-by-step details to set up an end-to-end Jenkins pipeline for a Java application using SonarQube, Argo CD, Helm, and Kubernetes:
 
 ## Prerequisites
