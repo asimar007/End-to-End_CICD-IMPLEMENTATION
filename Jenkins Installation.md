@@ -1,3 +1,4 @@
+
 # Jenkins
 
 Here, The Jenkins Installation steps:-
@@ -12,7 +13,7 @@ Here, The Jenkins Installation steps:-
 
 - Launch instances
 
-<img  width="994"  alt="Screenshot 2023-02-01 at 12 37 45 PM"  src="https://user-images.githubusercontent.com/43399466/215974891-196abfe9-ace0-407b-abd2-adcffe218e3f.png">
+![ec2.png](https://github.com/asimar007/Cross-Region-Migration-of-AWS-EBS-Volumes/blob/main/Screenshot/ec2.png?raw=true)
 
 ### Install Jenkins.
 
@@ -70,7 +71,7 @@ sudo apt-get install jenkins
 
 - Add inbound traffic rules as shown in the image (you can just allow TCP 8080 as well, in my case, I allowed `All traffic`).
 
-<img  width="1187"  alt="Screenshot 2023-02-01 at 12 42 01 PM"  src="https://user-images.githubusercontent.com/43399466/215975712-2fc569cb-9d76-49b4-9345-d8b62187aa22.png">
+(![SG.png](https://github.com/asimar007/Cross-Region-Migration-of-AWS-EBS-Volumes/blob/main/Screenshot/SG.png?raw=true)
 
 ### Login to Jenkins using the below URL:
 
@@ -110,54 +111,4 @@ Jenkins Installation is Successful. You can now starting using the Jenkins
 
 <img  width="990"  alt="Screenshot 2023-02-01 at 11 14 13 AM"  src="https://user-images.githubusercontent.com/43399466/215961440-3f13f82b-61a2-4117-88bc-0da265a67fa7.png">
 
-## Install the Docker Pipeline plugin in Jenkins:
 
-- Log in to Jenkins.
-
-- Go to Manage Jenkins > Manage Plugins.
-
-- In the Available tab, search for "Docker Pipeline".
-
-- Select the plugin and click the Install button.
-
-- Restart Jenkins after the plugin is installed.
-
-<img  width="1392"  alt="Screenshot 2023-02-01 at 12 17 02 PM"  src="https://user-images.githubusercontent.com/43399466/215973898-7c366525-15db-4876-bd71-49522ecb267d.png">
-
-Wait for the Jenkins to be restarted.
-
-## Docker Slave Configuration
-
-Run the below command to Install Docker
-
-```
-
-sudo apt update
-
-sudo apt install docker.io
-
-```
-
-### Grant Jenkins user and Ubuntu user permission to docker deamon.
-
-```
-
-sudo su -
-
-usermod -aG docker jenkins
-
-usermod -aG docker ubuntu
-
-systemctl restart docker
-
-```
-
-Once you are done with the above steps, it is better to restart Jenkins.
-
-```
-
-http://<ec2-instance-public-ip>:8080/restart
-
-```
-
-The docker agent configuration is now successful.
